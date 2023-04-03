@@ -1,5 +1,7 @@
 package cz.muni.fi.pb162.hw01.impl;
 
+import cz.muni.fi.pb162.hw01.impl.DisplayLogic.DisplayObject;
+import cz.muni.fi.pb162.hw01.impl.DisplayLogic.Printer;
 import cz.muni.fi.pb162.hw01.impl.displays.Display;
 import cz.muni.fi.pb162.hw01.impl.displays.DisplayStringifier;
 
@@ -17,7 +19,7 @@ public final class Factory {
      * @return display instance
      */
     public Display display(int size) {
-        throw new UnsupportedOperationException();
+        return new DisplayObject(size);
     }
 
     /**
@@ -27,6 +29,6 @@ public final class Factory {
      * @return printer instance
      */
     public DisplayStringifier stringifier() {
-        throw new UnsupportedOperationException();
+        return new Printer();
     }
 }
